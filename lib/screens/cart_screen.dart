@@ -16,7 +16,7 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   final _promoCtrl = TextEditingController();
   bool _promoApplied = false;
-  bool _promoLoading = false;
+  final bool _promoLoading = false;
   static const _promoCode = 'HARBOR10';
 
   @override
@@ -213,7 +213,7 @@ class _CartScreenState extends State<CartScreen> {
                             ),
                             const SizedBox(height: 12),
                             // Trust row
-                            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: const [
+                            const Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
                               _TrustItem(Icons.lock_outline, 'Secure checkout'),
                               _TrustItem(Icons.verified_outlined, '2-year warranty'),
                               _TrustItem(Icons.replay_outlined, '30-day returns'),

@@ -52,10 +52,10 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
           const Spacer(),
           // Nav links — show from 768px+
           if (w > 768) ...[
-            _NavLink('Home', '/'),
-            _NavLink('Products', '/products'),
-            _NavLink('Deals', '/deals'),
-            _NavLink('Support', '/support'),
+            const _NavLink('Home', '/'),
+            const _NavLink('Products', '/products'),
+            const _NavLink('Deals', '/deals'),
+            const _NavLink('Support', '/support'),
             const SizedBox(width: 12),
           ],
           // Icons
@@ -495,15 +495,15 @@ class AppFooter extends StatelessWidget {
             if (w > 700)
               Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Expanded(flex: 2, child: _FooterBrand()),
-                Expanded(child: _FooterCol('Shop', [('All Laptops','/products'),('Deals','/deals')])),
-                Expanded(child: _FooterCol('Company', [('About Us','/'),('Blog','/')])),
-                Expanded(child: _FooterCol('Support', [('Contact','/support'),('FAQ','/support')])),
+                const Expanded(child: _FooterCol('Shop', [('All Laptops','/products'),('Deals','/deals')])),
+                const Expanded(child: _FooterCol('Company', [('About Us','/'),('Blog','/')])),
+                const Expanded(child: _FooterCol('Support', [('Contact','/support'),('FAQ','/support')])),
               ])
             else
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 _FooterBrand(),
                 const SizedBox(height: 32),
-                Row(children: [
+                const Row(children: [
                   Expanded(child: _FooterCol('Shop', [('All Laptops','/products'),('Deals','/deals')])),
                   Expanded(child: _FooterCol('Support', [('Contact','/support'),('FAQ','/support')])),
                 ]),

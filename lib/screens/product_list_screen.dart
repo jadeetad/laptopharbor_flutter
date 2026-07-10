@@ -110,10 +110,10 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   child: TextField(
                     controller: _searchCtrl,
                     onSubmitted: (_) => _load(),
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Search...',
-                      prefixIcon: const Icon(Icons.search, size: 18),
-                      contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                      prefixIcon: Icon(Icons.search, size: 18),
+                      contentPadding: EdgeInsets.symmetric(vertical: 10),
                       isDense: true,
                     ),
                   ),

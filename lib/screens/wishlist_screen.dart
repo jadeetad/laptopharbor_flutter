@@ -5,7 +5,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/product.dart';
 import '../providers/auth_provider.dart';
 import '../providers/wishlist_provider.dart';
-import '../services/product_service.dart';
 import '../theme.dart';
 import '../widgets/shared_widgets.dart';
 

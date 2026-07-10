@@ -42,15 +42,15 @@ class _SupportScreenState extends State<SupportScreen> {
             padding: const EdgeInsets.all(20),
             child: Column(children: [
               // Quick options
-              Row(children: [
+              const Row(children: [
                 Expanded(child: _SupportCard(Icons.chat_bubble_outline, 'Live Chat', 'Instant help from a tech expert')),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(child: _SupportCard(Icons.email_outlined, 'Email Us', 'Response within 24 hours')),
               ]),
               const SizedBox(height: 12),
-              Row(children: [
+              const Row(children: [
                 Expanded(child: _SupportCard(Icons.phone_outlined, 'Call Us', '+1 (800) 555-HARBOR')),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(child: _SupportCard(Icons.quiz_outlined, 'FAQ', 'Quick answers to common questions')),
               ]),
               const SizedBox(height: 28),

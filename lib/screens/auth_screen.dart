@@ -75,10 +75,10 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               const SizedBox(height: 16),
               // Logo
-              Row(children: [
-                const LogoWidget(size: 32),
-                const SizedBox(width: 8),
-                const Text('LaptopHarbor',
+              const Row(children: [
+                LogoWidget(size: 32),
+                SizedBox(width: 8),
+                Text('LaptopHarbor',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
               ]),
               const SizedBox(height: 32),

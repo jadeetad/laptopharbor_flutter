@@ -46,7 +46,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     final wishlist = context.watch<WishlistProvider>();
 
     if (_loading) return const Scaffold(body: Center(child: CircularProgressIndicator()));
-    if (_product == null) return Scaffold(
+    if (_product == null) {
+      return Scaffold(
       appBar: AppBar(),
       body: Center(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -56,6 +57,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         ],
       )),
     );
+    }
 
     final p = _product!;
 
@@ -173,9 +175,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     child: ElevatedButton.icon(
                       onPressed: () {
                         if (!auth.isLoggedIn) { showAuthBottomSheet(context); return; }
-                        for (int i = 0; i < _qty; i++) cart.addItem(p, userId: auth.user!.id);
+                        for (int i = 0; i < _qty; i++) {
+                          cart.addItem(p, userId: auth.user!.id);
+                        }
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Added to cart'), backgroundColor: AppColors.accent, duration: const Duration(seconds: 2)),
+                          const SnackBar(content: Text('Added to cart'), backgroundColor: AppColors.accent, duration: Duration(seconds: 2)),
                         );
                       },
                       icon: const Icon(Icons.shopping_bag_outlined, size: 18),
@@ -202,9 +206,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 ]),
                 const SizedBox(height: 16),
                 // Trust badges
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
+                  children: [
                     _TrustBadge(Icons.verified_outlined, '2-Year Warranty'),
                     _TrustBadge(Icons.local_shipping_outlined, 'Free Delivery'),
                     _TrustBadge(Icons.replay_outlined, '30-Day Returns'),

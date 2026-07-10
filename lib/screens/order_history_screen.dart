@@ -5,7 +5,6 @@ import '../models/cart_item.dart' show Order;
 import '../providers/auth_provider.dart';
 import '../services/order_service.dart';
 import '../theme.dart';
-import '../widgets/shared_widgets.dart';
 
 class OrderHistoryScreen extends StatefulWidget {
   const OrderHistoryScreen({super.key});

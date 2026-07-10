@@ -14,7 +14,7 @@ class LaptopSvgWidget extends StatelessWidget {
   });
 
   String _buildSvg() => '''
-<svg width="${width}" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="$width" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="5" width="200" height="118" rx="9" fill="$bgColor"/>
   <rect x="16" y="11" width="188" height="106" rx="6" fill="$screenColor" opacity="0.85"/>
   <rect x="0" y="124" width="220" height="11" rx="3" fill="$bgColor"/>

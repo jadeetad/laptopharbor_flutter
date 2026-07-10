@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const _MarqueeStrip(),
           _RevealSection(child: _CategorySection()),
           _RevealSection(child: _FeaturedSection(products: _featured, loading: _loading)),
-          _RevealSection(child: const _WhySection()),
+          const _RevealSection(child: _WhySection()),
           const AppFooter(),
         ]),
       ),
@@ -185,7 +185,7 @@ class _HeroText extends StatelessWidget {
             fontSize: fs, fontWeight: FontWeight.w800,
             letterSpacing: -2.5, color: AppColors.ink, height: 0.98,
           ),
-        children: [
+        children: const [
   TextSpan(text: 'Find Your\n'),
   TextSpan(text: 'Perfect', style: TextStyle(color: AppColors.accent)),
   TextSpan(text: '\nMachine.'),
@@ -236,13 +236,13 @@ class _HeroText extends StatelessWidget {
       const SizedBox(height: 44),
       // Stats
       Row(mainAxisSize: MainAxisSize.min, children: [
-        _Stat('2,400+', 'Products'),
+        const _Stat('2,400+', 'Products'),
         Container(width: 1, height: 36, color: AppColors.border2,
             margin: const EdgeInsets.symmetric(horizontal: 24)),
-        _Stat('48', 'Brands'),
+        const _Stat('48', 'Brands'),
         Container(width: 1, height: 36, color: AppColors.border2,
             margin: const EdgeInsets.symmetric(horizontal: 24)),
-        _Stat('98%', 'Satisfaction'),
+        const _Stat('98%', 'Satisfaction'),
       ]),
     ]);
   }
@@ -328,10 +328,10 @@ class _HeroVisual extends StatelessWidget {
           ),
           HeroLaptopWidget(width: laptopW),
           // Spec chips
-          Positioned(top: 20, left: 0, child: _SpecChip('Intel Core i9-14900H')),
-          Positioned(top: 80, right: 0, child: _SpecChip('RTX 4080 16GB')),
-          Positioned(bottom: 80, left: 0, child: _SpecChip('32GB DDR5 RAM')),
-          Positioned(bottom: 20, right: 0, child: _SpecChip('2TB NVMe SSD')),
+          const Positioned(top: 20, left: 0, child: _SpecChip('Intel Core i9-14900H')),
+          const Positioned(top: 80, right: 0, child: _SpecChip('RTX 4080 16GB')),
+          const Positioned(bottom: 80, left: 0, child: _SpecChip('32GB DDR5 RAM')),
+          const Positioned(bottom: 20, right: 0, child: _SpecChip('2TB NVMe SSD')),
         ]),
       ),
     );

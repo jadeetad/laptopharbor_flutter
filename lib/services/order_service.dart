@@ -1,6 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/cart_item.dart';
-import '../models/cart_item.dart' show Order;
 
 class OrderService {
   static final _supabase = Supabase.instance.client;

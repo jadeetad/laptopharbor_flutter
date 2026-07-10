@@ -143,9 +143,9 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                 const SizedBox(height: 16),
 
                 // Quick links
-                _QuickLink(Icons.shopping_bag_outlined, 'Order History', '/orders'),
-                _QuickLink(Icons.favorite_border, 'Wishlist', '/wishlist'),
-                _QuickLink(Icons.headset_mic_outlined, 'Support', '/support'),
+                const _QuickLink(Icons.shopping_bag_outlined, 'Order History', '/orders'),
+                const _QuickLink(Icons.favorite_border, 'Wishlist', '/wishlist'),
+                const _QuickLink(Icons.headset_mic_outlined, 'Support', '/support'),
                 const SizedBox(height: 16),
 
                 // Sign out

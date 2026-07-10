@@ -40,7 +40,7 @@ class ProductService {
       response = await query;
     }
 
-    List<Product> products = (response as List)
+    List<Product> products = (response)
         .map((e) => Product.fromJson(e as Map<String, dynamic>))
         .toList();
 

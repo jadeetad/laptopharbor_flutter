@@ -95,7 +95,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             const SizedBox(height: 28),
 
             if (_step == 0) ...[
-              _SectionTitle('Shipping information'),
+              const _SectionTitle('Shipping information'),
               Row(children: [
                 Expanded(child: _Field('First name', _firstNameCtrl)),
                 const SizedBox(width: 12),
@@ -122,7 +122,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             ],
 
             if (_step == 1) ...[
-              _SectionTitle('Payment details'),
+              const _SectionTitle('Payment details'),
               const Padding(
                 padding: EdgeInsets.only(bottom: 16),
                 child: Row(children: [
@@ -151,7 +151,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             ],
 
             if (_step == 2) ...[
-              _SectionTitle('Order review'),
+              const _SectionTitle('Order review'),
               ...cart.items.map((item) => Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Row(children: [
